@@ -53,9 +53,9 @@ function mostrarJumpSustosSequenciais(qtd) {
     return;
   }
 
-  // Escolhe vídeo aleatório na pasta Pecorine125/Susto/mp4
+  // Escolhe vídeo aleatório na pasta Susto/mp4
   const num = Math.floor(Math.random() * totalSustos);
-  videoSusto.src = `Pecorine125/Susto/mp4/susto${num}.mp4`;
+  videoSusto.src = `Susto/mp4/susto${num}.mp4`;
 
   // Limpa classes e aplica efeitos aleatórios
   videoSusto.className = "";
