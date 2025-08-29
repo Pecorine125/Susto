@@ -1,1 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  padding: 50px;
+  transition: background 0.3s;
+}
 
+#quiz-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Jump scare container centralizado */
+#jump-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0);
+  z-index: 1000;
+  overflow: hidden;
+  transition: background 0.5s;
+}
+
+#jump-container video {
+  max-width: 640px;
+  max-height: 360px;
+  transform: scale(0.5);
+  transition: transform 0.3s;
+}
+
+/* Tremor */
+.tremor {
+  animation: tremer 0.5s infinite;
+}
+
+@keyframes tremer {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(-10px,0); }
+  50% { transform: translate(10px,0); }
+  75% { transform: translate(-10px,0); }
+  100% { transform: translate(0,0); }
+}
+
+/* Pulsar fundo vermelho */
+.pulsar {
+  animation: pulsarFundo 0.5s infinite alternate;
+}
+
+@keyframes pulsarFundo {
+  0% { background: #111; }
+  100% { background: #440000; }
+}
+
+/* Glitch no vídeo */
+.glitch {
+  filter: contrast(150%) brightness(120%) hue-rotate(20deg);
+}
